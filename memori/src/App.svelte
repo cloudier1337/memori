@@ -1,17 +1,44 @@
 <script>
-	export let name;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>V MEGLÍ</h1>
+	<p>
+		Siva meglà se razliva krog mene,
+		skoraj ne vidim pred sabo roké.
+		Hišic predmestnih nikoder nobene,
+		kakor bi krile jih kalne vodé.
+		
+		Včasih nekdo mi nasproti pritava,
+		ki se je spustil v tekočo to plast,
+		kakor da riba ogromna priplava,
+		ali grozljiva povodna pošast.
+		
+		Z jezerom širnim je mesto prekrito,
+		plaho se gibljem globoko na dnu.
+		Skozi mokroto v prijazno zaščito
+		najdem po slutnji si komaj sledu.
+		
+		Hiši se stari previdno približam,
+		v nizko ji smuknem, domačo vežó.
+		Vlažne tegobe se urno odkrižam -
+		tu sem, v gostilni, in tu je lepó!
+		
+		Strop je obokan, opažena stena,
+		peč je velika in topel je zrak.
+		V kuhinji godeta ponev in rena,
+		masten obveva me vonj in sladak.
+		
+		To je zavetje za krasno početje!
+		Sonca si točim, srcé se mi vžge.
+		Prav je, da zunaj preplavljen ves svet je,
+		kakor z vodámi, z valovi meglè!</p>
 </main>
 
 <style>
 	main {
 		text-align: center;
 		padding: 1em;
-		max-width: 240px;
 		margin: 0 auto;
 	}
 
