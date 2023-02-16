@@ -1,36 +1,14 @@
 <script>
-		import { onMount } from 'svelte';
+import { onMount } from 'svelte';
 
-let characters = ['🐊', '🤔', '✨'];
+let ideas = [];
 
-let confetti = new Array(100).fill()
-	.map((_, i) => {
-		return {
-			character: characters[i % characters.length],
-			x: Math.random() * 100,
-			y: -20 - Math.random() * 100,
-			r: 0.1 + Math.random() * 1
-		};
-	})
-	.sort((a, b) => a.r - b.r);
 
-onMount(() => {
-	let frame;
-
-	function loop() {
-		frame = requestAnimationFrame(loop);
-
-		confetti = confetti.map(emoji => {
-			emoji.y += 0.7 * emoji.r;
-			if (emoji.y > 120) emoji.y = -20;
-			return emoji;
-		});
-	}
-
-	loop();
-
-	return () => cancelAnimationFrame(frame);
+onMount(async () => {
+	const res = await fetch(`https://philosophyapi.pythonanywhere.com/api/ideas/`);
+   ideas = await res.json();
 });
+	
 </script>
 
 <main>
@@ -65,10 +43,17 @@ onMount(() => {
 		Sonca si točim, srcé se mi vžge.
 		Prav je, da zunaj preplavljen ves svet je,
 		kakor z vodámi, z valovi meglè!</p>
+
+
+		<ul>
+			{#each ideas as idea}
+				<li>{idea}</li>
+			{/each}
+		</ul>
 </main>
 
-{#each confetti as c}
-	<span style="left: {c.x}%; top: {c.y}%; transform: scale({c.r})">{c.character}</span>
+{#each ideas as c}
+	<span>{c}</span>
 {/each}
 
 <style>
