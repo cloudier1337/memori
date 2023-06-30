@@ -2,11 +2,24 @@
 import { onMount } from 'svelte';
 
 let ideas = [];
+const endpoint = `http://localhost:5263/api/Philosophy/ideas`;
 
+// onMount(async () => {
+// 	var headers = { "Access-Control-Allow-Origin" : "*" };
+//     const url = `http://localhost:5263/api/ideas/`;
 
-onMount(async () => {
-	const res = await fetch(`https://philosophyapi.pythonanywhere.com/api/ideas/`);
-   ideas = await res.json();
+//     fetch(url)
+//     .then((response) => {
+//         if (!response.ok) {
+//             throw new Error(response.error)
+//         }
+//         ideas = response.json();
+//     });
+// });
+onMount(async function () {
+  const response = await fetch(endpoint);
+  const data = await response.json();
+  console.log(data);
 });
 	
 </script>

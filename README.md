@@ -1,1 +1,11 @@
-# memori
+<h1>Existential Web Development</h1>
+<p>This project is an exploration of the existential dimension of web development. It seeks to embrace the idea that technology is not a mere tool, but a way of being-in-the-world. The project uses Svelte, a modern web development framework, as a means to this end.</p>
+
+<h2>The Challenge</h2>
+<p>The challenge of web development is to create a world that is both meaningful and useful to people. This requires a deep understanding of human needs and desires, as well as a sensitivity to the cultural and historical context in which the technology is embedded. The project seeks to meet this challenge by embracing the primordial existential dimension of technology.</p>
+<h2>The Approach</h2>
+<p>The project takes a modular and composable approach to web development, in keeping with the existential philosophy. Each component is designed to be simple, clear, and transparent, allowing the user to engage with the technology in an authentic and meaningful way. By staying true to this approach, the project hopes to create a technology that is not just efficient, but also resonates with the user on a deep level.</p>
+<h2>The Goal</h2>
+<p>The goal of the project is not just to create a functional web application, but to create an authentic and meaningful experience for the user. This requires a deep engagement with the existential dimension of technology, and a willingness to embrace the uncertainty and ambiguity that comes with it. By staying true to this goal, the project hopes to create a technology that is not just useful, but also enriches the user's experience of being-in-the-world.</p>
+<h2>Conclusion</h2>
+<p>In conclusion, this Svelte project is an exploration of the existential dimension of web development. By embracing the philosophy, the project seeks to create a technology that is not just efficient, but also authentic and meaningful. The project takes a modular and composable approach to achieve this goal, and hopes to enrich the user's experience of being-in-the-world through its technology.</p>
