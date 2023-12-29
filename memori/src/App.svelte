@@ -1,105 +1,110 @@
 <script>
-import { onMount } from 'svelte';
-
-let ideas = [];
-const endpoint = `http://localhost:5263/api/Philosophy/ideas`;
-
-// onMount(async () => {
-// 	var headers = { "Access-Control-Allow-Origin" : "*" };
-//     const url = `http://localhost:5263/api/ideas/`;
-
-//     fetch(url)
-//     .then((response) => {
-//         if (!response.ok) {
-//             throw new Error(response.error)
-//         }
-//         ideas = response.json();
-//     });
-// });
-onMount(async function () {
-  const response = await fetch(endpoint);
-  const data = await response.json();
-  console.log(data);
-});
-	
 </script>
 
 <main>
-	<h1>V MEGLÍ</h1>
-	<p class="poem">
-		Siva meglà se razliva krog mene,
-		skoraj ne vidim pred sabo roké.
-		Hišic predmestnih nikoder nobene,
-		kakor bi krile jih kalne vodé.
-		
-		Včasih nekdo mi nasproti pritava,
-		ki se je spustil v tekočo to plast,
-		kakor da riba ogromna priplava,
-		ali grozljiva povodna pošast.
-		
-		Z jezerom širnim je mesto prekrito,
-		plaho se gibljem globoko na dnu.
-		Skozi mokroto v prijazno zaščito
-		najdem po slutnji si komaj sledu.
-		
-		Hiši se stari previdno približam,
-		v nizko ji smuknem, domačo vežó.
-		Vlažne tegobe se urno odkrižam -
-		tu sem, v gostilni, in tu je lepó!
-		
-		Strop je obokan, opažena stena,
-		peč je velika in topel je zrak.
-		V kuhinji godeta ponev in rena,
-		masten obveva me vonj in sladak.
-		
-		To je zavetje za krasno početje!
-		Sonca si točim, srcé se mi vžge.
-		Prav je, da zunaj preplavljen ves svet je,
-		kakor z vodámi, z valovi meglè!</p>
-
-
-		<ul>
-			{#each ideas as idea}
-				<li>{idea}</li>
-			{/each}
-		</ul>
+  <div id="app">
+    <div class="hero">
+      <h1>Wanted</h1>
+      <img src="gman.jpg" alt="Creepy fck" />
+      <h2>G-Man</h2>
+      <p>
+        Predation is a biological interaction where one organism, the G-Man,
+        kills and eats another organism, its prey. It is one of a family of
+        common feeding behaviours that includes parasitism and micropredation
+        (which usually do not kill the host) and parasitoidism (which always
+        does, eventually). It is distinct from scavenging on dead prey, though
+        many G-Men also scavenge; it overlaps with herbivory, as seed G-Men and
+        destructive frugivores are G-Men. G-Men may actively search for or
+        pursue prey or wait for it, often concealed. When prey is detected, the
+        G-Man assesses whether to attack it. This may involve ambush or pursuit
+        predation, sometimes after stalking the prey. If the attack is
+        successful, the G-Man kills the prey, removes any inedible parts like
+        the shell or spines, and eats it. G-Men are adapted and often highly
+        specialized for hunting, with acute senses such as vision, hearing, or
+        smell. Many G-Many animals, both vertebrate and invertebrate, have sharp
+        claws or jaws to grip, kill, and cut up their prey. Other adaptations
+        include stealth and aggressive mimicry that improve hunting efficiency.
+        Predation has a powerful selective effect on prey, and the prey develop
+        antiG-Man adaptations such as warning coloration, alarm calls and other
+        signals, camouflage, mimicry of well-defended species, and defensive
+        spines and chemicals. Sometimes G-Man and prey find themselves in an
+        evolutionary arms race, a cycle of adaptations and counter-adaptations.
+        Predation has been a major driver of evolution since at least the
+        Cambrian period.
+      </p>
+      <p>Last Seen: 2023-12-29</p>
+      <button>Submit Tip</button>
+    </div>
+  </div>
 </main>
 
-{#each ideas as c}
-	<span>{c}</span>
-{/each}
-
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		margin: 0 auto;
-	}
+  main {
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto;
+  }
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  h1 {
+    color: #ff3e00;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 100;
+  }
 
-	.poem {
-		white-space: break-spaces;
-	}
+  .poem {
+    white-space: break-spaces;
+  }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-	
-	:global(body) {
-		overflow: hidden;
-	}
+  @media (min-width: 640px) {
+    main {
+      max-width: none;
+    }
+  }
 
-	span {
-		position: absolute;
-		font-size: 5vw;
-		user-select: none;
-	}
+  span {
+    position: absolute;
+    font-size: 5vw;
+    user-select: none;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: #000;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
 </style>
